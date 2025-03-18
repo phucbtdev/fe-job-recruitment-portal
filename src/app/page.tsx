@@ -1,103 +1,242 @@
-import Image from "next/image";
+import {
+  SearchIcon,
+  BriefcaseIcon,
+  BuildingIcon,
+  UsersIcon,
+  ArrowRightIcon,
+} from "lucide-react";
+import { JobCard } from "./components/layouts/Header/JobCard";
+import { CategoryCard } from "./components/layouts/Header/CategoryCard";
+import { CompanyCard } from "./components/layouts/Header/CompanyCard";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <section className="bg-blue-600 py-16 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Find Your Dream Job Today
+          </h1>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Discover thousands of job opportunities with top employers to find
+            your perfect match.
+          </p>
+          <div className="bg-white p-4 rounded-lg shadow-lg flex flex-col md:flex-row gap-4 max-w-3xl mx-auto">
+            <div className="flex-1">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Job title, keywords, or company"
+                  className="w-full pl-10 pr-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <SearchIcon className="absolute left-3 top-3.5 text-gray-400 h-5 w-5" />
+              </div>
+            </div>
+            <div className="flex-1">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Location"
+                  className="w-full pl-10 pr-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <BuildingIcon className="absolute left-3 top-3.5 text-gray-400 h-5 w-5" />
+              </div>
+            </div>
+            <button className="bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors duration-300 font-semibold">
+              Search Jobs
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      {/* Featured Jobs Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex justify-between items-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-800">Featured Jobs</h2>
+            <a
+              href="#"
+              className="text-blue-600 flex items-center hover:text-blue-800 font-medium"
+            >
+              View all jobs <ArrowRightIcon className="ml-2 h-4 w-4" />
+            </a>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <JobCard
+              title="Senior Frontend Developer"
+              company="TechCorp"
+              location="San Francisco, CA"
+              salary="$120K - $150K"
+              type="Full-time"
+              logo="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+              tags={["React", "TypeScript", "Tailwind"]}
+              isNew={true}
+            />
+            <JobCard
+              title="Product Manager"
+              company="InnovateCo"
+              location="New York, NY"
+              salary="$110K - $140K"
+              type="Full-time"
+              logo="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+              tags={["Agile", "SaaS", "B2B"]}
+            />
+            <JobCard
+              title="UX/UI Designer"
+              company="DesignHub"
+              location="Remote"
+              salary="$90K - $120K"
+              type="Full-time"
+              logo="https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+              tags={["Figma", "UX Research", "Design Systems"]}
+              isNew={true}
+            />
+            <JobCard
+              title="DevOps Engineer"
+              company="CloudSys"
+              location="Austin, TX"
+              salary="$130K - $160K"
+              type="Full-time"
+              logo="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+              tags={["AWS", "Docker", "Kubernetes"]}
+            />
+            <JobCard
+              title="Marketing Specialist"
+              company="GrowthLabs"
+              location="Chicago, IL"
+              salary="$70K - $90K"
+              type="Full-time"
+              logo="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+              tags={["SEO", "Content Marketing", "Analytics"]}
+            />
+            <JobCard
+              title="Data Scientist"
+              company="DataDrive"
+              location="Remote"
+              salary="$115K - $145K"
+              type="Full-time"
+              logo="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+              tags={["Python", "Machine Learning", "SQL"]}
+              isNew={true}
+            />
+          </div>
+        </div>
+      </section>
+      {/* Categories Section */}
+      <section className="py-16 px-4 bg-gray-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Browse by Category
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Explore job opportunities by industry or role to find the perfect
+              position that matches your skills and interests.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <CategoryCard
+              icon={<BriefcaseIcon />}
+              name="Technology"
+              count={1420}
+            />
+            <CategoryCard icon={<BuildingIcon />} name="Finance" count={870} />
+            <CategoryCard icon={<UsersIcon />} name="Marketing" count={650} />
+            <CategoryCard
+              icon={<BriefcaseIcon />}
+              name="Healthcare"
+              count={930}
+            />
+            <CategoryCard
+              icon={<BuildingIcon />}
+              name="Education"
+              count={540}
+            />
+            <CategoryCard icon={<UsersIcon />} name="Design" count={320} />
+            <CategoryCard icon={<BriefcaseIcon />} name="Sales" count={760} />
+            <CategoryCard
+              icon={<BuildingIcon />}
+              name="Customer Service"
+              count={490}
+            />
+          </div>
+        </div>
+      </section>
+      {/* Top Companies Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Top Companies Hiring
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Join these industry-leading organizations that are changing the
+              world and building amazing teams.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <CompanyCard
+              idCompany={1}
+              name="TechCorp"
+              logo="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+              industry="Technology"
+              location="San Francisco, CA"
+              openings={24}
+            />
+            <CompanyCard
+              idCompany={2}
+              name="InnovateCo"
+              logo="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+              industry="SaaS"
+              location="New York, NY"
+              openings={18}
+            />
+            <CompanyCard
+              idCompany={3}
+              name="DesignHub"
+              logo="https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+              industry="Design"
+              location="Remote"
+              openings={12}
+            />
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="bg-blue-600 py-16 px-4">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+          <div className="md:w-1/2 mb-8 md:mb-0">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to take the next step in your career?
+            </h2>
+            <p className="text-blue-100 mb-6">
+              Join thousands of job seekers who found their dream job through
+              our platform.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <button className="bg-white text-blue-600 py-3 px-6 rounded-md hover:bg-blue-50 transition-colors duration-300 font-semibold">
+                Upload Your Resume
+              </button>
+              <button className="bg-transparent text-white py-3 px-6 rounded-md border border-white hover:bg-blue-700 transition-colors duration-300 font-semibold">
+                Browse All Jobs
+              </button>
+            </div>
+          </div>
+          <div className="md:w-1/3">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold text-gray-800 mb-4">
+                For Employers
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Find the perfect candidates for your open positions and build
+                your dream team.
+              </p>
+              <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors duration-300 font-semibold">
+                Post a Job
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
