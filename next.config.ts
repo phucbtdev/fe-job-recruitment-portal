@@ -24,6 +24,10 @@ const nextConfig: NextConfig = {
         source: "/cam-nang-nghe-nghiep",
         destination: "/careerAdvice",
       },
+       {
+        source: "/viec-lam-da-luu",
+        destination: "/savedJobs",
+      },
       {
         source: "/forgot-password",
         destination: "/forgotPassword",
