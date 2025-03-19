@@ -175,7 +175,9 @@ export default function PricingPage() {
                   ))}
                 </ul>
                 <button
-                  onClick={() => router.push(`/checkout/${plan.id}`)}
+                  onClick={() =>
+                    router.push(`nang-cap-goi/checkout/${plan.id}`)
+                  }
                   className={`mt-8 w-full py-3 px-4 rounded-md text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
                     plan.popular
                       ? "bg-blue-600 text-white hover:bg-blue-700"
