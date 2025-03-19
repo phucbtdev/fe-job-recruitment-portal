@@ -44,6 +44,23 @@ export function Header() {
                 </Link>
               </div>
             </div>
+            <div className="relative group">
+              <Link
+                className="text-gray-700 hover:text-blue-600 font-medium"
+                href="/danh-sach-mau-cv"
+              >
+                Hồ sơ & CV
+              </Link>
+              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-52">
+                <Link
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                  href="/danh-sach-mau-cv"
+                >
+                  Tạo CV
+                </Link>
+              </div>
+            </div>
+
             <Link
               className="text-gray-700 hover:text-blue-600 font-medium"
               href="/nha-tuyen-dung"
