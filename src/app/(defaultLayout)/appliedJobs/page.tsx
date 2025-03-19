@@ -178,8 +178,7 @@ export default function AppliedJobs() {
                           <div className="flex items-center gap-1 text-gray-500">
                             <CalendarIcon size={16} />
                             <span className="text-sm">
-                              Applied on{" "}
-                              {new Date(job.appliedDate).toLocaleDateString()}
+                              Applied on {job.appliedDate}
                             </span>
                           </div>
                           <div className="flex items-center gap-1 text-gray-500">

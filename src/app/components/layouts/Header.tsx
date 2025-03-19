@@ -15,35 +15,40 @@ export function Header() {
             </Link>
           </div>
           <nav className="hidden md:flex space-x-8">
-            <Link
-              className="text-gray-700 hover:text-blue-600 font-medium"
-              href="/viec-lam"
-            >
-              Việc làm
-            </Link>
-            <Link
-              className="text-gray-700 hover:text-blue-600 font-medium"
-              href="/cam-nang-nghe-nghiep"
-            >
-              Cẩm nang nghề nghiệp
-            </Link>
+            <div className="relative group">
+              <Link
+                className="text-gray-700 hover:text-blue-600 font-medium"
+                href="/viec-lam"
+              >
+                Việc làm
+              </Link>
+              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-52">
+                <Link
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                  href="/cam-nang-nghe-nghiep"
+                >
+                  Cẩm nang nghề nghiệp
+                </Link>
+                <Link
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                  href="/viec-lam-da-luu"
+                >
+                  Công việc đã lưu
+                </Link>
+
+                <Link
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                  href="/viec-lam-da-ung-tuyen"
+                >
+                  Việc làm đã ứng tuyển
+                </Link>
+              </div>
+            </div>
             <Link
               className="text-gray-700 hover:text-blue-600 font-medium"
               href="/nha-tuyen-dung"
             >
               Nhà tuyển dụng
-            </Link>
-            <Link
-              className="text-gray-700 hover:text-blue-600 font-medium"
-              href="/viec-lam-da-luu"
-            >
-              Công việc đã lưu
-            </Link>
-            <Link
-              className="text-gray-700 hover:text-blue-600 font-medium"
-              href="/viec-lam-da-ung-tuyen"
-            >
-              Việc làm đã ứng tuyển
             </Link>
           </nav>
           <div className="hidden md:flex items-center space-x-4">
