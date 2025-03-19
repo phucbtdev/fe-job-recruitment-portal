@@ -4,14 +4,15 @@ const nextConfig: NextConfig = {
   /* config options here */
   async rewrites() {
     return [
-      { source: "/viec-lam",              destination: "/jobsList",},
-      { source: "/viec-lam/:id",          destination: "/jobsList/:id", },
-      { source: "/nha-tuyen-dung",        destination: "/employer", },
-      { source: "/nha-tuyen-dung/:id",    destination: "/employer/:id",},
-      { source: "/cam-nang-nghe-nghiep",  destination: "/careerAdvice",},
-      { source: "/viec-lam-da-luu",       destination: "/savedJobs",},
-      { source: "/viec-lam-da-ung-tuyen", destination: "/appliedJobs", },
-      { source: "/danh-sach-mau-cv",      destination: "/cvList", },
+      { source: "/viec-lam",              destination: "/jobsList"},
+      { source: "/viec-lam/:id",          destination: "/jobsList/:id",},
+      { source: "/nha-tuyen-dung",        destination: "/employer" },
+      { source: "/nha-tuyen-dung/:id",    destination: "/employer/:id"},
+      { source: "/cam-nang-nghe-nghiep",  destination: "/careerAdvice"},
+      { source: "/viec-lam-da-luu",       destination: "/savedJobs"},
+      { source: "/viec-lam-da-ung-tuyen", destination: "/appliedJobs" },
+      { source: "/danh-sach-mau-cv", destination: "/cvList" },
+      { source: "/nang-cap-goi",      destination: "/upgrade", },
       { source: "/forgot-password",       destination: "/forgotPassword", },
       
     ];

@@ -49,6 +49,7 @@ const templates = [
   )
 );
 const categories = ["All", "Professional", "Creative", "Simple"];
+
 export default function CVTemplatesPage() {
   const router = useRouter();
   const [selectedTemplate, setSelectedTemplate] = useState<

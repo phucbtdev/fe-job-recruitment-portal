@@ -67,6 +67,12 @@ export function Header() {
             >
               Nhà tuyển dụng
             </Link>
+            <Link
+              className="text-gray-700 hover:text-blue-600 font-medium"
+              href="/nang-cap-goi"
+            >
+              Nâng cấp gói
+            </Link>
           </nav>
           <div className="hidden md:flex items-center space-x-4">
             <Link
