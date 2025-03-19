@@ -17,21 +17,21 @@ export function Header() {
           <nav className="hidden md:flex space-x-8">
             <Link
               className="text-gray-700 hover:text-blue-600 font-medium"
-              href="/danh-sach-viec-lam"
+              href="/viec-lam"
             >
               Việc làm
+            </Link>
+            <Link
+              className="text-gray-700 hover:text-blue-600 font-medium"
+              href="/cam-nang-nghe-nghiep"
+            >
+              Cẩm nang nghề nghiệp
             </Link>
             <Link
               className="text-gray-700 hover:text-blue-600 font-medium"
               href="/nha-tuyen-dung"
             >
               Nhà tuyển dụng
-            </Link>
-            <Link
-              className="text-gray-700 hover:text-blue-600 font-medium"
-              href="/cam-nang"
-            >
-              Cẩm nang nghề nghiệp
             </Link>
           </nav>
           <div className="hidden md:flex items-center space-x-4">
@@ -42,13 +42,13 @@ export function Header() {
               Nhà tuyển dụng
             </Link>
             <Link
-              href="/dang-nhap"
+              href="/login"
               className="text-gray-700 hover:text-blue-600 font-medium"
             >
               Đăng nhập
             </Link>
             <Link
-              href="/dang-ky"
+              href="/register"
               className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300 font-medium"
             >
               Đăng ký

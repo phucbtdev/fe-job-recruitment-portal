@@ -5,9 +5,9 @@ import {
   UsersIcon,
   ArrowRightIcon,
 } from "lucide-react";
-import { JobCard } from "./components/layouts/Header/JobCard";
-import { CategoryCard } from "./components/layouts/Header/CategoryCard";
-import { CompanyCard } from "./components/layouts/Header/CompanyCard";
+import { JobCard } from "../components/layouts/Header/JobCard";
+import { CategoryCard } from "../components/layouts/Header/CategoryCard";
+import { CompanyCard } from "../components/layouts/Header/CompanyCard";
 
 export default function Home() {
   return (

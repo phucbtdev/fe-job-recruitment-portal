@@ -1,0 +1,54 @@
+import { MapPinIcon, BriefcaseIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+interface CompanyCardProps {
+  idCompany: number;
+  name: string;
+  logo: string;
+  industry: string;
+  location: string;
+  openings: number;
+}
+export default function EmpployerCard({
+  idCompany,
+  name,
+  logo,
+  industry,
+  location,
+  openings,
+}: CompanyCardProps) {
+  return (
+    <div className="bg-white rounded-lg shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+      <div className="flex items-center">
+        <Image
+          src={logo}
+          alt={`${name} logo`}
+          className="rounded-md object-cover "
+          width={64}
+          height={64}
+        />
+
+        <div>
+          <h3 className="text-xl font-semibold text-gray-800">{name}</h3>
+          <p className="text-gray-600">{industry}</p>
+        </div>
+      </div>
+      <div className="mt-4 flex items-center text-gray-500 text-sm">
+        <MapPinIcon className="h-4 w-4 mr-1" />
+        <span>{location}</span>
+      </div>
+      <div className="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+        <div className="flex items-center text-gray-600">
+          <BriefcaseIcon className="h-4 w-4 mr-1" />
+          <span>{openings} open positions</span>
+        </div>
+        <Link
+          href={`/nha-tuyen-dung/${idCompany}`}
+          className="text-blue-600 hover:text-blue-800 font-medium text-sm mr-2"
+        >
+          Xem chi tiết
+        </Link>
+      </div>
+    </div>
+  );
+}
