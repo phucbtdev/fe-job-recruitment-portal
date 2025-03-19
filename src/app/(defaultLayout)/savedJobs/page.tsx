@@ -17,7 +17,8 @@ const mockSavedJobs = [
     salary: "$120,000 - $150,000",
     description: "We are looking for an experienced frontend developer...",
     category: "Engineering",
-    companyLogo: "https://logo.clearbit.com/techcorp.com",
+    companyLogo:
+      "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
   },
   {
     id: 2,
@@ -31,7 +32,8 @@ const mockSavedJobs = [
     salary: "$90,000 - $120,000",
     description: "Join our creative team as a product designer...",
     category: "Design",
-    companyLogo: "https://logo.clearbit.com/designstudio.com",
+    companyLogo:
+      "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
   },
   // Add more mock data as needed
 ].concat(
@@ -51,7 +53,7 @@ const mockSavedJobs = [
       salary: "$100,000 - $130,000",
       description: "Join our engineering team...",
       category: "Engineering",
-      companyLogo: `https://logo.clearbit.com/techcompany${i}.com`,
+      companyLogo: `https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80`,
     })
   )
 );
@@ -81,7 +83,7 @@ const categories = [
     name: "Sales",
   },
 ];
-export const SavedJobsPage = () => {
+export default function SavedJobsPage() {
   const [savedJobs, setSavedJobs] = useState(mockSavedJobs);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -230,4 +232,4 @@ export const SavedJobsPage = () => {
       </main>
     </div>
   );
-};
+}

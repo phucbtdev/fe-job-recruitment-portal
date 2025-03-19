@@ -39,6 +39,12 @@ export function Header() {
             >
               Công việc đã lưu
             </Link>
+            <Link
+              className="text-gray-700 hover:text-blue-600 font-medium"
+              href="/viec-lam-da-ung-tuyen"
+            >
+              Việc làm đã ứng tuyển
+            </Link>
           </nav>
           <div className="hidden md:flex items-center space-x-4">
             <Link

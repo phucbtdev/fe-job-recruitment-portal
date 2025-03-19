@@ -36,7 +36,7 @@ export default function SavedJobCard({ job, onUnsave }: SavedJobCardProps) {
     <div className="bg-white rounded-lg shadow hover:shadow-md transition-shadow">
       <div className="p-6">
         <div className="flex items-start gap-4">
-          <div className="w-12 h-12">
+          <div className="relative w-12 h-12">
             <Image
               src={job.companyLogo}
               alt={`${job.company} logo`}
