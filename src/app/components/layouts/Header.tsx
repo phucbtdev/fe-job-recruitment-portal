@@ -76,7 +76,7 @@ export function Header() {
           </nav>
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              href="/nha-tuyen-dung"
+              href="/tuyen-dung"
               className="text-gray-400 hover:text-blue-600 font-medium"
             >
               Nhà tuyển dụng
