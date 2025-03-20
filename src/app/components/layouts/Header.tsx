@@ -63,9 +63,9 @@ export function Header() {
 
             <Link
               className="text-gray-700 hover:text-blue-600 font-medium"
-              href="/nha-tuyen-dung"
+              href="/danh-sach-nha-tuyen-dung"
             >
-              Nhà tuyển dụng
+              Danh sách nhà tuyển dụng
             </Link>
             <Link
               className="text-gray-700 hover:text-blue-600 font-medium"
