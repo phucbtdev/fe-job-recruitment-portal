@@ -16,30 +16,47 @@ export default function Header() {
               </span>
             </div>
             <nav className="hidden md:ml-8 md:flex md:space-x-8">
-              <a
-                href="#"
-                className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium"
-              >
-                Find Jobs
-              </a>
-              <a
+              <div className="relative flex justify-center group">
+                <Link
+                  href="#"
+                  className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                >
+                  Giới thiệu
+                </Link>
+                <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-52 top-8">
+                  <Link
+                    href="/tuyen-dung/viec-da-dang-tuyen"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                  >
+                    Tin đã đăng
+                  </Link>
+                </div>
+              </div>
+
+              <Link
                 href="#"
                 className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium"
               >
-                Companies
-              </a>
-              <a
+                Dịch vụ
+              </Link>
+              <Link
                 href="#"
                 className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium"
               >
-                Career Resources
-              </a>
-              <a
+                Báo giá
+              </Link>
+              <Link
                 href="#"
                 className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium"
               >
-                Salary Guide
-              </a>
+                Hổ trợ
+              </Link>
+              <Link
+                href="#"
+                className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+              >
+                BLog tuyển dụng
+              </Link>
             </nav>
           </div>
           <div className="hidden md:flex items-center">
@@ -47,13 +64,13 @@ export default function Header() {
               href="/employers"
               className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium"
             >
-              For Employers
+              Tư vấn tuyển dụng
             </Link>
             <button className="ml-4 px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700">
-              Sign In
+              Đăng nhập
             </button>
             <button className="ml-2 px-4 py-2 border border-blue-600 rounded-md shadow-sm text-sm font-medium text-blue-600 bg-white hover:bg-blue-50">
-              Register
+              Đăng tin
             </button>
           </div>
           <div className="flex items-center md:hidden">
@@ -73,36 +90,36 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden">
           <div className="pt-2 pb-3 space-y-1">
-            <a
+            <Link
               href="#"
               className="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
             >
               Find Jobs
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="block px-3 py-2 text-base font-medium text-gray-500 hover:bg-gray-50"
             >
               Companies
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="block px-3 py-2 text-base font-medium text-gray-500 hover:bg-gray-50"
             >
               Career Resources
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="block px-3 py-2 text-base font-medium text-gray-500 hover:bg-gray-50"
             >
               Salary Guide
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="block px-3 py-2 text-base font-medium text-gray-500 hover:bg-gray-50"
             >
               For Employers
-            </a>
+            </Link>
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="flex items-center px-4">
@@ -116,18 +133,18 @@ export default function Header() {
               </div>
             </div>
             <div className="mt-3 space-y-1">
-              <a
+              <Link
                 href="#"
                 className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100"
               >
                 Sign In
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100"
               >
                 Register
-              </a>
+              </Link>
             </div>
           </div>
         </div>
