@@ -11,7 +11,7 @@ export default function CheckoutPage() {
     setIsProcessing(true);
     // Simulate payment processing
     setTimeout(() => {
-      router.push("/checkout/success");
+      router.push("/nang-cap-goi/checkout/success");
     }, 1500);
   };
   return (
