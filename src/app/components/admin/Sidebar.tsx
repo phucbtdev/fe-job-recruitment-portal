@@ -23,7 +23,7 @@ export default function Sidebar() {
     {
       icon: UsersIcon,
       label: "Users",
-      path: "/admin/users",
+      path: "/admin/user-management",
     },
     {
       icon: BriefcaseIcon,

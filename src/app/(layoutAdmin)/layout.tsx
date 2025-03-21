@@ -13,9 +13,7 @@ export default function LayoutAdmin({
           <main className="flex-grow">
             <div className="flex h-screen bg-gray-100">
               <Sidebar />
-              <div className="flex-1 overflow-auto">
-                <div className="p-8">{children}</div>
-              </div>
+              <div className="flex-1 overflow-auto">{children}</div>
             </div>
           </main>
         </div>

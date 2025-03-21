@@ -20,7 +20,8 @@ const nextConfig: NextConfig = {
       { source: "/tuyen-dung",                     destination: "/employer"              },
       { source: "/tuyen-dung/viec-da-dang-tuyen",  destination: "/employer/postedJobs"   },
       
-      { source: "/admin",                         destination: "/admin"              },
+      { source: "/admin",                           destination: "/admin"                     },             
+      { source: "/admin/user-management",           destination: "/admin/userManagement"      },
     ];
   },
   images: {

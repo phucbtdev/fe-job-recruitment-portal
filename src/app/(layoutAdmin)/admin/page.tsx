@@ -4,7 +4,7 @@ import RecruitmentCharts from "@/app/components/admin/dashboard/RecruitmentChart
 import React from "react";
 export default function AdminDashboard() {
   return (
-    <div>
+    <div className="p-8">
       <h1 className="text-2xl font-semibold text-gray-900 mb-8">
         Dashboard Overview
       </h1>
