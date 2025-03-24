@@ -1,6 +1,9 @@
 import "../globals.css";
 import React from "react";
-import Sidebar from "../components/admin/Sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
+import { SiteHeader } from "@/components/site-header";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+
 export default function LayoutAdmin({
   children,
 }: Readonly<{
@@ -9,14 +12,20 @@ export default function LayoutAdmin({
   return (
     <html>
       <body>
-        <div className="flex flex-col min-h-screen bg-gray-50">
-          <main className="flex-grow">
-            <div className="flex h-screen bg-gray-100">
-              <Sidebar />
-              <div className="flex-1 overflow-auto">{children}</div>
-            </div>
-          </main>
-        </div>
+        <SidebarProvider
+          style={
+            {
+              "--sidebar-width": "calc(var(--spacing) * 72)",
+              "--header-height": "calc(var(--spacing) * 12)",
+            } as React.CSSProperties
+          }
+        >
+          <AppSidebar variant="inset" />
+          <SidebarInset>
+            <SiteHeader />
+            {children}
+          </SidebarInset>
+        </SidebarProvider>
       </body>
     </html>
   );

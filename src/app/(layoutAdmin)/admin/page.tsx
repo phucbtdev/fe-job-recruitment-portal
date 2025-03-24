@@ -1,19 +1,20 @@
-import DashboardStats from "@/app/components/admin/dashboard/DashboardStats";
-import RecentActivities from "@/app/components/admin/dashboard/RecentActivities";
-import RecruitmentCharts from "@/app/components/admin/dashboard/RecruitmentCharts";
 import React from "react";
+import { ChartAreaInteractive } from "@/components/chart-area-interactive";
+import { DataTable } from "@/components/data-table";
+import { SectionCards } from "@/components/section-cards";
+
+import data from "./data.json";
 export default function AdminDashboard() {
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-semibold text-gray-900 mb-8">
-        Dashboard Overview
-      </h1>
-      <DashboardStats />
-      <div className="mt-8">
-        <RecruitmentCharts />
-      </div>
-      <div className="mt-8">
-        <RecentActivities />
+    <div className="flex flex-1 flex-col">
+      <div className="@container/main flex flex-1 flex-col gap-2">
+        <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+          <SectionCards />
+          <div className="px-4 lg:px-6">
+            <ChartAreaInteractive />
+          </div>
+          <DataTable data={data} />
+        </div>
       </div>
     </div>
   );

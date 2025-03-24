@@ -16,16 +16,19 @@ export default function UserFilters() {
         </div>
         <div className="flex items-center gap-4">
           <div className="flex items-center w-80 gap-2">
-            <FilterIcon className="h-5 w-5 text-gray-400" />
+            <FilterIcon className="h-10 w-10 text-gray-400" />
             <select
-              style={{ border: "1px solid red" }}
+              style={{ border: "1px solid #d1d5dc " }}
               className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
             >
               <option value="">User Type</option>
               <option value="jobseeker">Job Seeker</option>
               <option value="employer">Employer</option>
             </select>
-            <select className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
+            <select
+              className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+              style={{ border: "1px solid #d1d5dc " }}
+            >
               <option value="">Status</option>
               <option value="active">Active</option>
               <option value="inactive">Inactive</option>
