@@ -19,8 +19,9 @@ const nextConfig: NextConfig = {
       { source: "/forgot-password",                   destination: "/forgotPassword" },
        
       //employer
-      { source: "/tuyen-dung/dang-nhap",              destination: "/employer/login"          },
-      { source: "/tuyen-dung",                        destination: "/employer/home"              },
+      { source: "/tuyen-dung",                        destination: "/employer/home"       },
+      { source: "/tuyen-dung/dang-ky",                destination: "/employer/register"   },
+      { source: "/tuyen-dung/dang-nhap",              destination: "/employer/login"      },
       { source: "/tuyen-dung/viec-da-dang-tuyen",     destination: "/employer/postedJobs" },
       
       //admin

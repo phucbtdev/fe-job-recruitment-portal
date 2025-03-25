@@ -12,7 +12,7 @@ export default function LayoutEmployer({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  const excludedRoutes = ["/tuyen-dung/dang-nhap"];
+  const excludedRoutes = ["/tuyen-dung/dang-nhap", "/tuyen-dung/dang-ky"];
 
   if (excludedRoutes.includes(pathname)) {
     console.log(pathname);
