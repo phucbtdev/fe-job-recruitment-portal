@@ -1,19 +1,45 @@
-import Footer from "../components/employer/Footer";
-import Header from "../components/employer/Header";
+"use client";
 import "../globals.css";
-export default function EmployerLayout({
+import React from "react";
+import { AppSidebar } from "@/components/app-sidebar";
+import { SiteHeader } from "@/components/site-header";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { usePathname } from "next/navigation";
+
+export default function LayoutEmployer({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const excludedRoutes = ["/tuyen-dung/dang-nhap"];
+
+  if (excludedRoutes.includes(pathname)) {
+    console.log(pathname);
+    return (
+      <html>
+        <body>{children}</body>
+      </html>
+    );
+  }
+
   return (
     <html>
       <body>
-        <div className="flex flex-col min-h-screen bg-gray-50">
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </div>
+        <SidebarProvider
+          style={
+            {
+              "--sidebar-width": "calc(var(--spacing) * 72)",
+              "--header-height": "calc(var(--spacing) * 12)",
+            } as React.CSSProperties
+          }
+        >
+          <AppSidebar variant="inset" />
+          <SidebarInset>
+            <SiteHeader />
+            {children}
+          </SidebarInset>
+        </SidebarProvider>
       </body>
     </html>
   );

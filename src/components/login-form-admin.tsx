@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import img from "../../public/login.svg";
-export function LoginForm({
+export function LoginFormAmin({
   className,
   ...props
 }: React.ComponentProps<"div">) {
