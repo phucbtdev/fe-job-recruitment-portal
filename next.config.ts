@@ -16,16 +16,17 @@ const nextConfig: NextConfig = {
       { source: "/nang-cap-goi",                 destination: "/upgrade"          },
       { source: "/nang-cap-goi/checkout /:id",        destination: "/upgrade/checkout/:id"     },
       { source: "/nang-cap-goi/checkout/:id/success", destination: "/upgrade/checkout/success" },
-      { source: "/forgot-password",                   destination: "/forgotPassword" },
+      { source: "/forgot-password",                   destination: "/forgotPassword"           },
        
       //employer
-      { source: "/tuyen-dung",                        destination: "/employer/home"       },
-      { source: "/tuyen-dung/dang-ky",                destination: "/employer/register"   },
-      { source: "/tuyen-dung/dang-nhap",              destination: "/employer/login"      },
-      { source: "/tuyen-dung/viec-da-dang-tuyen",     destination: "/employer/postedJobs" },
+      { source: "/tuyen-dung/dang-ky",            destination: "/employerAuthLayout/register"    },
+      { source: "/tuyen-dung/dang-nhap",          destination: "/employerAuthLayout/login"       },
+      { source: "/tuyen-dung/trang-chu",          destination: "/employerDefaultLayout/home" },
+      { source: "/tuyen-dung",                    destination: "/employerDefaultLayout/home"     },
+      { source: "/tuyen-dung/viec-da-dang-tuyen", destination: "/employer/postedJobs"            },
       
       //admin
-      { source: "/admin/user-management",             destination: "/admin/userManagement"       },
+      { source: "/admin/user-management",         destination: "/admin/userManagement"       },
     ];
   },
   images: {
