@@ -1,5 +1,5 @@
 import "../globals.css";
-import { AppSidebar } from "@/components/app-sidebar";
+import { SidebarEmployerManagement } from "@/components/employer/layout/app-sidebar-employer";
 import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
@@ -19,7 +19,7 @@ export default function EmployerManagementLayout({
             } as React.CSSProperties
           }
         >
-          <AppSidebar variant="inset" />
+          <SidebarEmployerManagement variant="inset" />
           <SidebarInset>
             <SiteHeader />
             {children}

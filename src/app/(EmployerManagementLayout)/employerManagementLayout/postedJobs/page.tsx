@@ -4,11 +4,15 @@ import StatsOverview from "@/app/components/employer/StatsOverview";
 import React from "react";
 export default function PostedJobs() {
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <JobsHeader />
-        <StatsOverview />
-        <JobsTable />
+    <div className="flex flex-1 flex-col">
+      <div className="@container/main flex flex-1 flex-col gap-2">
+        <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+          <div className="px-4 lg:px-6">
+            <JobsHeader />
+            <StatsOverview />
+            <JobsTable />
+          </div>
+        </div>
       </div>
     </div>
   );

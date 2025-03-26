@@ -26,8 +26,9 @@ const nextConfig: NextConfig = {
       { source: "/tuyen-dung/dang-ky",            destination: "/employerAuthLayout/register"    },
       { source: "/tuyen-dung/dang-nhap",          destination: "/employerAuthLayout/login"       },
       { source: "/tuyen-dung/trang-chu",          destination: "/employerDefaultLayout/home"     },
-      { source: "/tuyen-dung",                    destination: "/employerDefaultLayout/home"     },
-      { source: "/tuyen-dung/viec-da-dang-tuyen", destination: "/employer/postedJobs"            },
+      { source: "/tuyen-dung",                    destination: "/employerDefaultLayout/home" },
+      { source: "/tuyen-dung/thong-ke",           destination: "/employerManagementLayout/dashboard" },
+      { source: "/tuyen-dung/viec-da-dang-tuyen", destination: "/employerManagementLayout/postedJobs"            },
       
       //admin
       { source: "/admin/login",                   destination: "/adminAuthLayout/login"                   },
