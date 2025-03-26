@@ -43,7 +43,7 @@ export default function ForgotPassword() {
         </div>
         <div className="border-t border-gray-200 pt-6">
           <Link
-            href="/login"
+            href="/dang-nhap"
             className="flex items-center justify-center text-sm font-medium text-gray-500 hover:text-gray-900"
           >
             <ArrowLeftIcon className="w-4 h-4 mr-2" />

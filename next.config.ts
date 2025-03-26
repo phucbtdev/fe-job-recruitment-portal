@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       //(candicate)
+      { source: "/",                             destination: "/candicateDefaultLayout/home"             },
+      { source: "/trang-chu",                    destination: "/candicateDefaultLayout/home"             },
       { source: "/viec-lam",                     destination: "/candicateDefaultLayout/jobsList"         },
       { source: "/viec-lam/:id",                 destination: "/candicateDefaultLayout/jobsList/:id"     },
       { source: "/danh-sach-nha-tuyen-dung",     destination: "/candicateDefaultLayout/employerList"     }, 
@@ -16,17 +18,21 @@ const nextConfig: NextConfig = {
       { source: "/nang-cap-goi",                 destination: "/candicateDefaultLayout/upgrade"          },
       { source: "/nang-cap-goi/checkout /:id",        destination: "/candicateDefaultLayout/upgrade/checkout/:id"     },
       { source: "/nang-cap-goi/checkout/:id/success", destination: "/candicateDefaultLayout/upgrade/checkout/success" },
-      { source: "/forgot-password",                   destination: "/candicateDefaultLayout/forgotPassword"           },
+      { source: "/dang-nhap",                         destination: "/candicateAuthLayout/login" },
+      { source: "/dang-ky",                           destination: "/candicateAuthLayout/register" },
+      { source: "/forgot-password",                   destination: "/candicateAuthLayout/forgotPassword" },
        
       //employer
       { source: "/tuyen-dung/dang-ky",            destination: "/employerAuthLayout/register"    },
       { source: "/tuyen-dung/dang-nhap",          destination: "/employerAuthLayout/login"       },
-      { source: "/tuyen-dung/trang-chu",          destination: "/employerDefaultLayout/home" },
+      { source: "/tuyen-dung/trang-chu",          destination: "/employerDefaultLayout/home"     },
       { source: "/tuyen-dung",                    destination: "/employerDefaultLayout/home"     },
       { source: "/tuyen-dung/viec-da-dang-tuyen", destination: "/employer/postedJobs"            },
       
       //admin
-      { source: "/admin/user-management",         destination: "/admin/userManagement"       },
+      { source: "/admin/login",                   destination: "/adminAuthLayout/login"                   },
+      { source: "/admin/dashboard",               destination: "/adminManagementLayout/dashboard"         },
+      { source: "/admin/user-management",         destination: "/adminManagementLayout/userManagement"    },
     ];
   },
   images: {

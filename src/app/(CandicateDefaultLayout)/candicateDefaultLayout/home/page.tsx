@@ -1,3 +1,6 @@
+import { CategoryCard } from "@/app/components/layouts/Header/CategoryCard";
+import { CompanyCard } from "@/app/components/layouts/Header/CompanyCard";
+import { JobCard } from "@/app/components/layouts/Header/JobCard";
 import {
   SearchIcon,
   BriefcaseIcon,
@@ -5,9 +8,6 @@ import {
   UsersIcon,
   ArrowRightIcon,
 } from "lucide-react";
-import { JobCard } from "../components/layouts/Header/JobCard";
-import { CategoryCard } from "../components/layouts/Header/CategoryCard";
-import { CompanyCard } from "../components/layouts/Header/CompanyCard";
 
 export default function Home() {
   return (
