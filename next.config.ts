@@ -5,18 +5,18 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       //(candicate)
-      { source: "/viec-lam",                     destination: "/jobsList"         },
-      { source: "/viec-lam/:id",                 destination: "/jobsList/:id"     },
-      { source: "/danh-sach-nha-tuyen-dung",     destination: "/employerList"     }, 
-      { source: "/danh-sach-nha-tuyen-dung/:id", destination: "/employerList/:id" },
-      { source: "/cam-nang-nghe-nghiep",         destination: "/careerAdvice"     },
-      { source: "/viec-lam-da-luu",              destination: "/savedJobs"        },
-      { source: "/viec-lam-da-ung-tuyen",        destination: "/appliedJobs"      },
-      { source: "/danh-sach-mau-cv",             destination: "/cvList"           },
-      { source: "/nang-cap-goi",                 destination: "/upgrade"          },
-      { source: "/nang-cap-goi/checkout /:id",        destination: "/upgrade/checkout/:id"     },
-      { source: "/nang-cap-goi/checkout/:id/success", destination: "/upgrade/checkout/success" },
-      { source: "/forgot-password",                   destination: "/forgotPassword"           },
+      { source: "/viec-lam",                     destination: "/candicateDefaultLayout/jobsList"         },
+      { source: "/viec-lam/:id",                 destination: "/candicateDefaultLayout/jobsList/:id"     },
+      { source: "/danh-sach-nha-tuyen-dung",     destination: "/candicateDefaultLayout/employerList"     }, 
+      { source: "/danh-sach-nha-tuyen-dung/:id", destination: "/candicateDefaultLayout/employerList/:id" },
+      { source: "/cam-nang-nghe-nghiep",         destination: "/candicateDefaultLayout/careerAdvice"     },
+      { source: "/viec-lam-da-luu",              destination: "/candicateDefaultLayout/savedJobs"        },
+      { source: "/viec-lam-da-ung-tuyen",        destination: "/candicateDefaultLayout/appliedJobs"      },
+      { source: "/danh-sach-mau-cv",             destination: "/candicateDefaultLayout/cvList"           },
+      { source: "/nang-cap-goi",                 destination: "/candicateDefaultLayout/upgrade"          },
+      { source: "/nang-cap-goi/checkout /:id",        destination: "/candicateDefaultLayout/upgrade/checkout/:id"     },
+      { source: "/nang-cap-goi/checkout/:id/success", destination: "/candicateDefaultLayout/upgrade/checkout/success" },
+      { source: "/forgot-password",                   destination: "/candicateDefaultLayout/forgotPassword"           },
        
       //employer
       { source: "/tuyen-dung/dang-ky",            destination: "/employerAuthLayout/register"    },
