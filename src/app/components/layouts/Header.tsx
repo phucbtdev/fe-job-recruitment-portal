@@ -82,13 +82,13 @@ export function Header() {
               Nhà tuyển dụng
             </Link>
             <Link
-              href="/login"
+              href="/dang-nhap"
               className="text-gray-700 hover:text-blue-600 font-medium"
             >
               Đăng nhập
             </Link>
             <Link
-              href="/register"
+              href="/dang-ky"
               className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300 font-medium"
             >
               Đăng ký

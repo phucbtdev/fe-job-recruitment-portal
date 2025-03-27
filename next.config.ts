@@ -16,24 +16,26 @@ const nextConfig: NextConfig = {
       { source: "/viec-lam-da-ung-tuyen",        destination: "/candicateDefaultLayout/appliedJobs"      },
       { source: "/danh-sach-mau-cv",             destination: "/candicateDefaultLayout/cvList"           },
       { source: "/nang-cap-goi",                 destination: "/candicateDefaultLayout/upgrade"          },
-      { source: "/nang-cap-goi/checkout /:id",        destination: "/candicateDefaultLayout/upgrade/checkout/:id"     },
+      { source: "/nang-cap-goi/checkout/:id",         destination: "/candicateDefaultLayout/upgrade/checkout/:id"     },
       { source: "/nang-cap-goi/checkout/:id/success", destination: "/candicateDefaultLayout/upgrade/checkout/success" },
       { source: "/dang-nhap",                         destination: "/candicateAuthLayout/login" },
       { source: "/dang-ky",                           destination: "/candicateAuthLayout/register" },
-      { source: "/forgot-password",                   destination: "/candicateAuthLayout/forgotPassword" },
+      { source: "/quen-mat-khau",                     destination: "/candicateAuthLayout/forgotPassword" },
        
-      //employer
-      { source: "/tuyen-dung/dang-ky",            destination: "/employerAuthLayout/register"    },
-      { source: "/tuyen-dung/dang-nhap",          destination: "/employerAuthLayout/login"       },
-      { source: "/tuyen-dung/trang-chu",          destination: "/employerDefaultLayout/home"     },
-      { source: "/tuyen-dung",                    destination: "/employerDefaultLayout/home" },
-      { source: "/tuyen-dung/thong-ke",           destination: "/employerManagementLayout/dashboard" },
-      { source: "/tuyen-dung/viec-da-dang-tuyen", destination: "/employerManagementLayout/postedJobs"            },
+      //employer - default layout
+      { source: "/tuyen-dung",                    destination: "/employerDefaultLayout/home"},
+      { source: "/tuyen-dung/trang-chu",          destination: "/employerDefaultLayout/home"},
+      //employer - auth layout
+      { source: "/tuyen-dung/dang-ky",            destination: "/employerAuthLayout/register"},
+      { source: "/tuyen-dung/dang-nhap",          destination: "/employerAuthLayout/login"},
+      //employer - management layout
+      { source: "/tuyen-dung/thong-ke",           destination: "/employerManagementLayout/dashboard"},
+      { source: "/tuyen-dung/viec-da-dang-tuyen", destination: "/employerManagementLayout/postedJobs"},
       
       //admin
-      { source: "/admin/login",                   destination: "/adminAuthLayout/login"                   },
-      { source: "/admin/dashboard",               destination: "/adminManagementLayout/dashboard"         },
-      { source: "/admin/user-management",         destination: "/adminManagementLayout/userManagement"    },
+      { source: "/admin/login",                   destination: "/adminAuthLayout/login"},
+      { source: "/admin/dashboard",               destination: "/adminManagementLayout/dashboard"},
+      { source: "/admin/user-management",         destination: "/adminManagementLayout/userManagement"},
     ];
   },
   images: {

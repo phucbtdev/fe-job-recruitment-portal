@@ -171,7 +171,7 @@ export default function Register() {
         <p className="text-gray-600">
           Already have an account?{" "}
           <Link
-            href="/login"
+            href="/dang-nhap"
             className="font-medium text-blue-600 hover:text-blue-500"
           >
             Đăng nhập

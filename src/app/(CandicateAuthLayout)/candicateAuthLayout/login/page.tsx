@@ -115,7 +115,7 @@ export default function Login() {
           </div>
           <div className="text-sm">
             <Link
-              href="/forgot-password"
+              href="/quen-mat-khau"
               className="font-medium text-blue-600 hover:text-blue-500"
             >
               Quên mật khẩu?
@@ -135,7 +135,7 @@ export default function Login() {
         <p className="text-gray-600">
           Dont have an account?{" "}
           <Link
-            href="/register"
+            href="/dang-ky"
             className="font-medium text-blue-600 hover:text-blue-500"
           >
             Đăng ký
