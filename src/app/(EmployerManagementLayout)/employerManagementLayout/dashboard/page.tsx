@@ -1,9 +1,9 @@
 import React from "react";
-import { ChartAreaInteractive } from "@/components/chart-area-interactive";
-import { DataTable } from "@/components/data-table";
-import { SectionCards } from "@/components/section-cards";
 
 import data from "./data.json";
+import { SectionCards } from "@/components/employer/dashboard/section-cards";
+import { ChartAreaInteractive } from "@/components/employer/dashboard/chart-area-interactive";
+import { DataTable } from "@/components/employer/dashboard/data-table";
 export default function AdminDashboard() {
   return (
     <div className="flex flex-1 flex-col">

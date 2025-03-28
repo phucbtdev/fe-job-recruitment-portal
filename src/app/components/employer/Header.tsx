@@ -11,9 +11,12 @@ export default function Header() {
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
               <BriefcaseIcon className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">
+              <Link
+                href="/tuyen-dung/trang-chu"
+                className="ml-2 text-xl font-bold text-gray-900"
+              >
                 JobPortal
-              </span>
+              </Link>
             </div>
             <nav className="hidden md:ml-8 md:flex md:space-x-8">
               <div className="relative flex justify-center group">
@@ -61,17 +64,23 @@ export default function Header() {
           </div>
           <div className="hidden md:flex items-center">
             <Link
-              href="/employers"
+              href="#"
               className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium"
             >
               Tư vấn tuyển dụng
             </Link>
-            <button className="ml-4 px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700">
+            <Link
+              href="/tuyen-dung/dang-nhap"
+              className="ml-4 px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700"
+            >
               Đăng nhập
-            </button>
-            <button className="ml-2 px-4 py-2 border border-blue-600 rounded-md shadow-sm text-sm font-medium text-blue-600 bg-white hover:bg-blue-50">
+            </Link>
+            <Link
+              href="/tuyen-dung/dang-tin"
+              className="ml-2 px-4 py-2 border border-blue-600 rounded-md shadow-sm text-sm font-medium text-blue-600 bg-white hover:bg-blue-50"
+            >
               Đăng tin
-            </button>
+            </Link>
           </div>
           <div className="flex items-center md:hidden">
             <button
