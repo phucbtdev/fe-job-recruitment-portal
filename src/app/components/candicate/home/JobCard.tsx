@@ -1,4 +1,5 @@
-import { MapPinIcon, ClockIcon } from 'lucide-react';
+import { MapPinIcon, ClockIcon } from "lucide-react";
+import Image from "next/image";
 interface JobCardProps {
   title: string;
   company: string;
@@ -22,10 +23,12 @@ export function JobCard({
   return (
     <div className="bg-white rounded-lg shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
       <div className="flex items-start">
-        <img
+        <Image
           src={logo}
           alt={`${company} logo`}
-          className="w-12 h-12 rounded-md object-cover mr-4"
+          width={48}
+          height={48}
+          className="rounded-md object-cover mr-4"
         />
         <div>
           <div className="flex items-center">

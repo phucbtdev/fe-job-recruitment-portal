@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { SearchIcon, BuildingIcon, SlidersIcon } from "lucide-react";
-import { JobCard } from "@/app/components/JobCard";
+import { JobCard } from "@/app/components/candicate/listJobs/JobCard";
 export default function JobsList() {
   const [showFilters, setShowFilters] = useState(false);
   const [selectedJobTypes, setSelectedJobTypes] = useState<string[]>([]);

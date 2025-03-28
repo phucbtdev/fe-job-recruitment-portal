@@ -10,7 +10,7 @@ import {
   ChevronLeftIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { JobCard } from "@/app/components/JobCard";
+import { JobCard } from "@/app/components/candicate/listJobs/JobCard";
 import Image from "next/image";
 export default function EmployerDetail() {
   const [selectedDepartment, setSelectedDepartment] = useState("all");

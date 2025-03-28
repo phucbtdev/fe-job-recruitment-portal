@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { JobCard } from "@/app/components/JobCard";
+import { JobCard } from "@/app/components/candicate/listJobs/JobCard";
 
 export default function JobDetail() {
   const [isSaved, setIsSaved] = useState(false);

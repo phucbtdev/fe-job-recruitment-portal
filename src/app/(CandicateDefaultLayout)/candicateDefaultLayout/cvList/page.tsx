@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { LayoutTemplateIcon, EyeIcon, CheckIcon } from "lucide-react";
 import Image from "next/image";
-import PreviewModal from "@/app/components/PreviewModal";
+import PreviewModal from "@/app/components/candicate/cvList/PreviewModal";
 const templates = [
   {
     id: "modern-1",

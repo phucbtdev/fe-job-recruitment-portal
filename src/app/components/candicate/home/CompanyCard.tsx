@@ -1,4 +1,5 @@
 import { MapPinIcon, BriefcaseIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 interface CompanyCardProps {
   idCompany: number;
@@ -19,9 +20,11 @@ export function CompanyCard({
   return (
     <div className="bg-white rounded-lg shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
       <div className="flex items-center">
-        <img
+        <Image
           src={logo}
           alt={`${name} logo`}
+          width={64}
+          height={64}
           className="w-16 h-16 rounded-md object-cover mr-4"
         />
         <div>

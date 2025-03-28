@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { SearchIcon, BookmarkIcon, BriefcaseIcon } from "lucide-react";
-import SavedJobCard from "@/app/components/SavedJobCard";
-import PaginationBar from "@/app/components/PaginationBar";
+import SavedJobCard from "@/app/components/candicate/savedJobs/SavedJobCard";
+import PaginationBar from "@/app/components/candicate/PaginationBar";
 // Mock data for saved jobs
 const mockSavedJobs = [
   {

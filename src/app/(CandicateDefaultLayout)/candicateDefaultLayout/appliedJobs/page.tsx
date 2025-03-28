@@ -8,7 +8,7 @@ import {
   ClockIcon,
 } from "lucide-react";
 import Image from "next/image";
-import PaginationBar from "@/app/components/PaginationBar";
+import PaginationBar from "@/app/components/candicate/PaginationBar";
 // Mock data for applied jobs
 const mockAppliedJobs = [
   {
