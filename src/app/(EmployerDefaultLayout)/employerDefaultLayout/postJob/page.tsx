@@ -9,19 +9,19 @@ import {
 const steps = [
   {
     id: 1,
-    name: "Company Details",
+    name: "Công ty",
   },
   {
     id: 2,
-    name: "Job Details",
+    name: "Công việc",
   },
   {
     id: 3,
-    name: "Requirements",
+    name: "Yêu cầu",
   },
   {
     id: 4,
-    name: "Preview & Post",
+    name: "Xem lại",
   },
 ];
 export default function PostJob() {
@@ -29,7 +29,7 @@ export default function PostJob() {
   const [jobType, setJobType] = useState("full-time");
   return (
     <div className="">
-      <div className="bg-white border-b">
+      <div className="bg-white border-b pb-2">
         <div className="max-w-6xl mx-auto px-4 py-8">
           <h1 className="text-3xl font-bold text-gray-900">Post a New Job</h1>
           <p className="mt-2 text-gray-600">
@@ -40,12 +40,7 @@ export default function PostJob() {
             <nav aria-label="Progress">
               <ol className="flex items-center">
                 {steps.map((step, stepIdx) => (
-                  <li
-                    key={step.name}
-                    className={`relative ${
-                      stepIdx !== steps.length - 1 ? "pr-8 sm:pr-20" : ""
-                    }`}
-                  >
+                  <li key={step.name} className={`relative pr-15 sm:pr-25`}>
                     {currentStep > step.id ? (
                       <>
                         <div
@@ -67,7 +62,9 @@ export default function PostJob() {
                           className="absolute inset-0 flex items-center"
                           aria-hidden="true"
                         >
-                          <div className="h-0.5 w-full bg-gray-200" />
+                          {stepIdx !== steps.length - 1 ? (
+                            <div className="h-0.5 w-full bg-gray-200" />
+                          ) : null}
                         </div>
                         <button
                           className="relative w-8 h-8 flex items-center justify-center bg-blue-600 rounded-full"
@@ -82,7 +79,9 @@ export default function PostJob() {
                           className="absolute inset-0 flex items-center"
                           aria-hidden="true"
                         >
-                          <div className="h-0.5 w-full bg-gray-200" />
+                          {stepIdx !== steps.length - 1 ? (
+                            <div className="h-0.5 w-full bg-gray-200" />
+                          ) : null}
                         </div>
                         <button className="group relative w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full hover:border-gray-400">
                           <span className="h-2.5 w-2.5 bg-transparent rounded-full group-hover:bg-gray-300" />
@@ -102,6 +101,22 @@ export default function PostJob() {
       <div className="max-w-6xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
+            <div className="mb-6 flex justify-between">
+              <button
+                type="button"
+                onClick={() => setCurrentStep(Math.max(1, currentStep - 1))}
+                className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                onClick={() => setCurrentStep(Math.min(4, currentStep + 1))}
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              >
+                {currentStep === 4 ? "Post Job" : "Next"}
+              </button>
+            </div>
             {currentStep === 1 && (
               <div className="bg-white rounded-lg shadow-sm p-6 space-y-6">
                 <h2 className="text-xl font-semibold text-gray-900">
